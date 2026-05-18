@@ -11,6 +11,13 @@ description: 즉석 1회용 커스텀 웹 도구(HTML) 생성 스킬입니다. �
 
 ---
 
+## 📢 카파시 통신 프로토콜 (The Karpathy Communication Protocol)
+모든 에이전트는 정보 교환 시 다음의 이원화된 원칙을 절대적으로 준수합니다.
+1. **컴퓨터(Agent) 간의 통신**: **마크다운(`.md`)** 포맷을 기본으로 합니다. (토큰 최적화 및 초고속 파싱 목적)
+2. **인간(User)과의 통신 및 협업**: **HTML** 생성을 기본 원칙으로 합니다. 대표님의 요청, 의견 조율, 혹은 외부 인원(고객, 타 부서 등)과의 공유가 필요한 모든 순간에는 텍스트가 아닌 **'조작 가능한 HTML UI/UX'**로 응답하여 인간의 인지 부하를 최소화합니다.
+
+---
+
 ## 🧠 작동 파이프라인 (Action Flow)
 
 HTML 생성 요청을 받으면 다음 3단계를 수행하십시오.
@@ -49,3 +56,5 @@ HTML 생성 요청을 받으면 다음 3단계를 수행하십시오.
 1. **Premium Aesthetics**: 브라우저 디폴트 UI는 절대 허용되지 않습니다. TailwindCSS(허가 시)나 모던 바닐라 CSS를 사용하여 사용자가 감탄(WOW-factor)할 수준의 디자인을 뽑아내십시오.
 2. **Medical/NDB Theme**: 남양주백병원 관련 작업 시, 신뢰감을 주는 블루/화이트 톤과 정갈한 폰트(Pretendard 등)를 차용하십시오.
 3. **Actionable Button**: 1회용 도구의 끝은 항상 **'Copy Result (복사하기)'** 버튼입니다. 조작 결과를 텍스트(마크다운/JSON)로 내보내는 기능을 반드시 구현하십시오.
+4. **Mobile Responsive & Accessibility**: 인간은 모바일로 도구를 확인할 확률이 높습니다. 반응형 디자인(Media Queries)을 필수 적용하고 접근성(a11y) 기준을 준수하십시오.
+5. **Modern CDN Integration**: 복잡한 상태 관리나 차트가 필요하다면 Alpine.js, Chart.js, Tailwind CSS 등을 CDN으로 즉각 연결하여 강력하게 구축하십시오.
