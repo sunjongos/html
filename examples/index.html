@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linear Ticket Prioritization Board</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header class="glass-header">
+            <div class="header-content">
+                <div class="logo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="linear-icon"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path><rect x="4" y="8" width="16" height="8" rx="2" ry="2"></rect></svg>
+                    <h1>Linear Triage</h1>
+                </div>
+                <p>Drag and drop 30 AI-pre-sorted tickets to refine priority. Click <strong>Copy as Markdown</strong> to finalize.</p>
+            </div>
+            <button id="copyBtn" class="premium-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span>Copy as Markdown</span>
+            </button>
+        </header>
+
+        <main class="kanban-board">
+            <div class="column-wrapper">
+                <div class="column-header">
+                    <div class="status-indicator status-now"></div>
+                    <h2>Now</h2>
+                    <span class="count" id="count-now">0</span>
+                </div>
+                <div class="kanban-column" id="col-now" data-col="Now"></div>
+            </div>
+            
+            <div class="column-wrapper">
+                <div class="column-header">
+                    <div class="status-indicator status-next"></div>
+                    <h2>Next</h2>
+                    <span class="count" id="count-next">0</span>
+                </div>
+                <div class="kanban-column" id="col-next" data-col="Next"></div>
+            </div>
+
+            <div class="column-wrapper">
+                <div class="column-header">
+                    <div class="status-indicator status-later"></div>
+                    <h2>Later</h2>
+                    <span class="count" id="count-later">0</span>
+                </div>
+                <div class="kanban-column" id="col-later" data-col="Later"></div>
+            </div>
+
+            <div class="column-wrapper">
+                <div class="column-header">
+                    <div class="status-indicator status-cut"></div>
+                    <h2>Cut</h2>
+                    <span class="count" id="count-cut">0</span>
+                </div>
+                <div class="kanban-column" id="col-cut" data-col="Cut"></div>
+            </div>
+        </main>
+        
+        <div id="toast" class="toast">Copied to Clipboard!</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
